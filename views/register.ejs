@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Registrate</h1>
+    <form action="" method="POST">
+        <label for="firstname">Nombre:</label>
+        <input type="text" id="firtsname" name="firstname" value="<%= locals.old && old.firstname ? old.firstanme : null%> ">
+        <p> <%= locals.errors && errors.firstname ? errors.firstname.mgs :null%> </p>
+
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>">
+        <p> <%= locals.errors && errors.lastname ? errors.lastname.mgs :null%> </p>
+
+        <label for="email">Correo Electronico:</label>
+        <input type="eamil" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+        <p> <%= locals.errors && errors.email ? errors.email.mgs :null%> </p>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" autocomplete="off">
+        <p><%= locals.errors && errors.password ? errors.password.mgs :null%> </p>
+
+        <label for="password2">Confirmar contraseña:</label>
+        <input type="password" id="password2" name="password2" autocomplete="off">
+        <p> <%= locals.errors && errors.password2 ? errors.password2.mgs :null%> </p>
+
+        <button type="submit">Registrate</button>
+    </form>
+</body>
+</html>
